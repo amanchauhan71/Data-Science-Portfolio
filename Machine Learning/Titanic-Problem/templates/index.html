@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>	
+
+<body >
+ 
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Titanic Analysis</h2>
+            <h3>Enter the Passenger class(1st,2nd or 3rd)</h3><br><input id="first" name="Pclass" required="required">
+			<h3>Choose Sex</h3><br><select name="Sex" id="Sex" required="required">
+                <option value="male">male</option>
+                <option value="female">female</option>
+            </select>
+            <h3>Enter the Age</h3><br><input id="third" name="Age" required="required">
+			<h3>Fare for journey</h3><br><input id="fourth" name="Fare" required="required">
+			
+			<h3>Choose Embarked</h3><br><select name="Embarked" id="Embarked" required="required">
+                <option value="s">S</option>
+                <option value="c">C</option>
+				 <option value="q">Q</option>
+            </select>
+			<h3>Choose Title</h3><br><select name="Title" id="Title" required="required">
+                <option value="Mr">Mr</option>
+                <option value="Miss">Miss</option>
+				<option value="Mrs">Mrs</option>
+				<option value="Master">Master</option>
+				<option value="Other">Other</option>
+			</select>
+			<h3>IsAlone(Enter value between 0 or 1 )</h3><br><input id="seventh" name="IsAlone" required="required">
+            
+           
+            <br><br><button id="sub" type="submit ">Prediction for Survival</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color:olive;
+            text-align: center;
+            padding: 0px;
+        }
+        
+       
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
